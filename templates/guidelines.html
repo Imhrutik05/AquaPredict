@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Guidelines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar-nav .dropdown-menu {
+            position: absolute;
+        }
+        .content-section {
+            background-color: rgb(245, 245, 245);
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .content-section h2 {
+            color: rgb(53, 184, 164);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-section h3 {
+            color: rgb(53, 184, 164);
+            margin-top: 30px;
+            font-size: 1.5rem;
+            /* font-weight: bold; */
+        }
+
+        .content-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .custom-hr {
+            border: 1px solid #35b8a4;
+            width: 500px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(53, 184, 164);
+        }
+
+
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 40px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="../static/logo.png" alt="Logo" style="margin-left: 80px; " class="logo"> AquaPredict
+        </a>
+        <div class="navbar-nav ml-auto">
+            <div class="row">
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Learn More About Water
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                                <li><a class="dropdown-item" href="/contaminants">Contaminants</a></li>
+                                <li><a class="dropdown-item" href="https://betterwatertoday.org">BetterWaterToday.org</a></li>
+                                <li><a class="dropdown-item" href="/guidelines">Guidelines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" style="width: 179px;" href="/addres">Additional Resources</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-section mt-5">
+        <h2 class="text-center">Water Quality Guidelines</h2>
+        <hr class="custom-hr mb-4">
+        <p>Ensuring the safety and quality of water is critical for public health and environmental protection. Below are the key guidelines and standards that help maintain water quality:</p>
+
+        <h3>1. World Health Organization (WHO) Guidelines</h3>
+        <p>The WHO provides international guidelines for drinking water quality, which serve as a reference point for countries to develop their own standards. These guidelines include limits on microbial, chemical, and radiological contaminants.</p>
+        <ul>
+            <li><strong>Microbial Contaminants:</strong> Limits on pathogens like bacteria, viruses, and parasites to prevent waterborne diseases.</li>
+            <li><strong>Chemical Contaminants:</strong> Guidelines for harmful chemicals such as heavy metals, nitrates, and organic compounds.</li>
+            <li><strong>Radiological Contaminants:</strong> Standards for radioactivity levels to protect against radiation exposure.</li>
+        </ul>
+
+        <h3>2. Environmental Protection Agency (EPA) Standards</h3>
+        <p>The EPA sets national standards for drinking water quality in the United States through the Safe Drinking Water Act. These standards are legally enforceable and include Maximum Contaminant Levels (MCLs) for various contaminants.</p>
+        <ul>
+            <li><strong>Primary Standards:</strong> Focus on contaminants that affect health, such as lead, arsenic, and nitrates.</li>
+            <li><strong>Secondary Standards:</strong> Address contaminants that affect taste, color, and odor, such as iron and manganese.</li>
+        </ul>
+
+        <h3>3. European Union (EU) Drinking Water Directive</h3>
+        <p>The EU sets regulations for drinking water quality to ensure it is safe for consumption. These regulations include parameters for microbiological, chemical, and indicator parameters.</p>
+        <ul>
+            <li><strong>Microbiological Parameters:</strong> Standards for E. coli, Enterococci, and other pathogens.</li>
+            <li><strong>Chemical Parameters:</strong> Limits for chemicals like lead, nitrates, and pesticides.</li>
+            <li><strong>Indicator Parameters:</strong> Guidelines for parameters such as pH, color, and turbidity to ensure overall water quality.</li>
+        </ul>
+
+        <h3>4. National Guidelines and Standards</h3>
+        <p>Many countries have their own guidelines and standards for drinking water quality, often based on international recommendations from the WHO or regional bodies like the EPA and EU. These national standards are adapted to local conditions and priorities.</p>
+        <ul>
+            <li><strong>India:</strong> Bureau of Indian Standards (BIS) sets the standards for drinking water quality in India.</li>
+            <li><strong>Canada:</strong> Health Canada provides guidelines for drinking water quality through the Guidelines for Canadian Drinking Water Quality.</li>
+            <li><strong>Australia:</strong> The Australian Drinking Water Guidelines (ADWG) set by the National Health and Medical Research Council (NHMRC) and the Natural Resource Management Ministerial Council (NRMMC).</li>
+        </ul>
+
+        <h3>5. Best Practices for Water Quality Management</h3>
+        <p>In addition to adhering to guidelines and standards, it is important to follow best practices for water quality management:</p>
+        <ul>
+            <li>Regular testing and monitoring of water sources to detect and address contamination early.</li>
+            <li>Implementing treatment processes like filtration, disinfection, and chemical treatment to remove contaminants.</li>
+            <li>Protecting water sources from pollution through sustainable land use and waste management practices.</li>
+            <li>Raising public awareness about water quality issues and promoting conservation efforts.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AquaPredict</h5>
+                    <p>Your one-stop solution for water quality prediction and awareness.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="{{ url_for('home') }}#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@AquaPredict.com</p>
+                    <!-- <p>Phone: (123) 456-7890</p> -->
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 AquaPredict. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

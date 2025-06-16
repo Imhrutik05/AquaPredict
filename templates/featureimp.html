@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Feature Importance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-image: url('../static/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            color: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .content-container h2, .content-container p {
+            color: #fff;
+        }
+        .content-container h3{
+            color: #35b8a4;
+        }
+        .custom-hr {
+            border: 1px solid #35b8a4;
+            width: 100%;
+        }
+        .navbar-nav .dropdown-menu {
+            position: absolute;
+        }
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 40px;
+        }
+        .content-container img{
+            width: 60%;
+            height: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#" style="margin-left: 80px; color: rgb(53, 184, 164); font-size: 1.5rem; font-weight: bold;">
+            <img src="../static/logo.png" alt="Logo" class="logo"> AquaPredict
+        </a>
+        <div class="navbar-nav ml-auto">
+            <div class="row">
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="learnMoreDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Learn More About Water
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="learnMoreDropdown">
+                                <li><a class="dropdown-item" href="/contaminants">Contaminants</a></li>
+                                <li><a class="dropdown-item" href="https://betterwatertoday.org">BetterWaterToday.org</a></li>
+                                <li><a class="dropdown-item" href="/guidelines">Guidelines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" style="width: 179px;" href="/addres">Additional Resources</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <div class="content-container">
+            <h2 class="text-center">Feature Importance in Water Quality Prediction</h2>
+            <hr class="custom-hr mb-4">
+            <p>Understanding the key features that influence water quality is essential for effective water management and ensuring the safety of drinking water. Here we break down the nine crucial parameters used in our water quality prediction model.</p>
+            
+            <h3>1. pH</h3>
+            <p>The pH level of water indicates its acidity or alkalinity. It is measured on a scale from 0 to 14, where 7 is neutral, values below 7 are acidic, and values above 7 are alkaline. Maintaining the right pH is vital for the health of aquatic life and the safety of drinking water.</p>
+            <p><strong>Agriculture:</strong> pH affects nutrient availability and microbial activity in the soil. Crops have optimal pH ranges for growth, and improper pH can lead to nutrient deficiencies or toxicities.</p>
+            <p><strong>Industry:</strong> pH is crucial in industrial processes like chemical manufacturing, pharmaceuticals, and water treatment. Incorrect pH levels can affect product quality and equipment integrity.</p>
+            <img src="../static/f1.png" alt="">
+    
+            <h3>2. Hardness</h3>
+            <p>Hardness measures the concentration of calcium and magnesium in water. It affects the water's ability to lather with soap and can cause scaling in pipes and appliances. Hardness is measured in mg/L, with higher values indicating harder water.</p>
+            <p><strong>Agriculture:</strong> Hard water can impact soil structure and crop growth. Excessive hardness can lead to the accumulation of minerals in soil, affecting its fertility.</p>
+            <p><strong>Industry:</strong> In industrial settings, hard water can cause scaling in boilers, cooling towers, and other equipment, reducing efficiency and increasing maintenance costs.</p>
+            <img src="../static/f2.png" alt="">
+    
+            <h3>3. Solids</h3>
+            <p>Total dissolved solids (TDS) refer to the combined content of all inorganic and organic substances contained in a liquid. High levels of solids can affect the taste of water and may indicate the presence of harmful contaminants.</p>
+            <p><strong>Agriculture:</strong> High TDS levels can lead to soil salinity issues, affecting plant growth and soil health. Crops have varying tolerance levels to TDS.</p>
+            <p><strong>Industry:</strong> In industrial processes, high TDS can cause scaling and fouling in equipment, affecting process efficiency and product quality.</p>
+            <img src="../static/f3.png" alt="">
+    
+            <h3>4. Chloramines</h3>
+            <p>Chloramines are disinfectants used to treat drinking water. While they help control harmful bacteria and viruses, high levels of chloramines can lead to an unpleasant taste and potential health risks.</p>
+            <p><strong>Agriculture:</strong> Chloramines can affect the microbial population in soil, impacting nutrient cycling and soil health.</p>
+            <p><strong>Industry:</strong> In industries like food and beverage production, chloramines can affect product taste and quality. They also impact the performance of reverse osmosis membranes used in water purification.</p>
+            <img src="../static/f4.png" alt="">
+            
+            <h3>5. Sulfate</h3>
+            <p>Sulfate is a naturally occurring substance found in minerals, soil, and rocks. High levels of sulfate in drinking water can lead to a laxative effect and a bitter taste, making it important to monitor.</p>
+            <p><strong>Agriculture:</strong> Sulfates are essential nutrients for plant growth but in high concentrations can lead to soil acidification and impact crop yield.</p>
+            <p><strong>Industry:</strong> High sulfate levels can cause corrosion in pipes and machinery, affecting the longevity and maintenance costs of industrial equipment.</p>
+            <img src="../static/f5.png" alt="">
+            
+            <h3>6. Conductivity</h3>
+            <p>Conductivity measures water's ability to conduct an electrical current, which is directly related to the concentration of ions in the water. High conductivity can indicate a high concentration of dissolved salts, which may affect water quality.</p>
+            <p><strong>Agriculture:</strong> High conductivity can indicate salinity issues in irrigation water, which can harm crops and reduce soil fertility.</p>
+            <p><strong>Industry:</strong> In industries such as electronics and pharmaceuticals, water with low conductivity is required to avoid contamination and ensure product quality.</p>
+            <img src="../static/f6.png" alt="">
+            
+            <h3>7. Organic Carbon</h3>
+            <p>Organic carbon is a measure of the organic compounds present in water. High levels of organic carbon can lead to the formation of disinfection byproducts during water treatment, which can be harmful to health.</p>
+            <p><strong>Agriculture:</strong> Organic carbon is crucial for soil health as it improves soil structure, water retention, and nutrient availability. However, high levels in water can indicate pollution.</p>
+            <p><strong>Industry:</strong> In water treatment, high organic carbon can lead to the formation of harmful byproducts, affecting water quality and treatment costs.</p>
+            <img src="../static/f7.png" alt="">
+            
+            <h3>8. Trihalomethanes</h3>
+            <p>Trihalomethanes (THMs) are a group of chemicals formed as a byproduct when chlorine is used to disinfect water. High levels of THMs can increase the risk of cancer and other health issues, making it important to control their levels.</p>
+            <p><strong>Agriculture:</strong> THMs can contaminate irrigation water, posing a risk to crop safety and potentially leading to the uptake of harmful substances by plants.</p>
+            <p><strong>Industry:</strong> THMs in process water can impact the quality of products, especially in the food and beverage industry, and pose health risks to workers.</p>
+            <img src="../static/f8.png" alt="">
+            
+            <h3>9. Turbidity</h3>
+            <p>Turbidity measures the clarity of water, with high turbidity indicating the presence of suspended particles. Turbidity can interfere with disinfection and provide a medium for microbial growth, thus impacting water quality.</p>
+            <p><strong>Agriculture:</strong> High turbidity in irrigation water can clog irrigation systems and reduce the effectiveness of water delivery to crops.</p>
+            <p><strong>Industry:</strong> In industrial processes, high turbidity can lead to the fouling of equipment, reducing efficiency and increasing maintenance costs.</p>
+            <img src="../static/f9.png" alt="">
+            
+            <p>By monitoring these key features, we can predict and ensure the quality of water, helping to safeguard public health, agricultural productivity, and industrial operations.</p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AquaPredict</h5>
+                    <p>Your one-stop solution for water quality prediction and awareness.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="{{ url_for('home') }}#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@AquaPredict.com</p>
+                    <!-- <p>Phone: (123) 456-7890</p> -->
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 AquaPredict. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script></body>
+</html>

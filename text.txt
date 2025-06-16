@@ -1,0 +1,2 @@
+model.py che sagle cells run karaiche 
+python app.py
