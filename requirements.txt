@@ -1,3 +1,5 @@
+setuptools>=42
+wheel
 Flask==2.2.2
 numpy==1.23.4  # Compatible version that works with scikit-learn, pandas, and seaborn
 scikit-learn==1.2.0
@@ -6,5 +8,4 @@ seaborn==0.13.2
 Jinja2==3.1.2
 termcolor==2.4.0
 gunicorn
-setuptools>=42
-wheel
+
